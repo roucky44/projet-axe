@@ -7,6 +7,7 @@
   <title>Sign In | Lotr 2025</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="global.css">
 </head>
 
 <body>

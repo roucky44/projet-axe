@@ -1,5 +1,6 @@
-@import "collection.css";
-@import "form.css";
-@import "responsive.css";
-@import "table.css";
-@import "style.css"
+@import "pages/collection.css";
+@import "pages/form.css";
+@import "pages/responsive.css";
+@import "pages/table.css";
+@import "pages/style.css";
+@import "pages/lightmode.css";

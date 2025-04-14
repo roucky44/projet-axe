@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="collection.css">
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="global.css">
 </head>
 <body>
   <header class="header1">

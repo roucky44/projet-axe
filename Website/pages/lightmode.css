@@ -1,0 +1,111 @@
+/* ===== LIGHT MODE ===== */
+.light_mode {
+    background-color: #f5f5f5;
+    color: #333;
+    transition: all 0.5s ease;
+  }
+  
+  .light_mode p,
+  .light_mode h1,
+  .light_mode h2,
+  .light_mode h3,
+  .light_mode h4,
+  .light_mode h5,
+  .light_mode h6 {
+    color: #333;
+  }
+  
+  .light_mode a {
+    color: #333 !important; /* priorité!!! */
+    text-decoration: none;
+  }
+  
+  .light_mode .header1,
+  .light_mode #main-header-div {
+    background-color: #f8f1e3;
+    border-bottom: 1px solid #e0d6c2;
+  }
+  
+  .light_mode .side-nav {
+    background-color: #f8f1e3;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .light_mode .side-nav-header {
+    border-bottom: 1px solid #e0d6c2;
+  }
+  
+  .light_mode .side-nav-links li a {
+    color: #5a4a3a;
+  }
+  
+  .light_mode .side-nav-links li a:hover,
+  .light_mode .side-nav-links li a:focus {
+    color: #b38b59;
+    background-color: rgba(179, 139, 89, 0.08);
+  }
+  
+  .light_mode .side-nav-links li a::before {
+    background-color: #b38b59;
+  }
+  
+  .light_mode .bar {
+    background-color: #b38b59;
+  }
+  
+  .light_mode .main-body {
+    background-color: #f5f5f5;
+  }
+  
+  .light_mode .card {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .light_mode .content {
+    color: #5a4a3a;
+  }
+  
+  .light_mode .quote {
+    color: #d4a259;
+  }
+  
+  /* Boutons */
+  .light_mode .main-button {
+    background: #b38b59;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #b38b59,
+      0 0 0.8rem #b38b59, inset 0 0 0.1rem #b38b59;
+  }
+  
+  /* Swiper */
+  .light_mode .swiper-slide {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Textes */
+  .light_mode .h1-div,
+  .light_mode .h2-div,
+  .light_mode #step-title,
+  .light_mode .second-section-title {
+    color: #5a4a3a;
+  }
+  
+  /* Footer */
+  .light_mode .footer {
+    background-color: #e8e0d0;
+  }
+  
+  .light_mode .links a {
+    color: #5a4a3a !important;
+  }
+  
+  /* Effets spéciaux préservés */
+  .light_mode .side-nav::after {
+    background: linear-gradient(90deg, #b38b59, #d4a259, #b38b59);
+  }
+  
+  .light_mode .movie-screen img:hover {
+    border: 2px solid #b38b59;
+  }
+  
+  /* LIGHT MODE */

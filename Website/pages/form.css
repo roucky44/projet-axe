@@ -1,0 +1,68 @@
+/*  GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: none;
+  scroll-behavior: smooth;
+}
+/*  GLOBAL */
+
+
+
+/* HEADER */
+#main-header-div {
+  background-color: #12141c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .625rem;
+}
+
+.header-div {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+}
+
+.icon-div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.icon-div img {
+  cursor: pointer;
+}
+
+.main-logo {
+  width: 22%;
+  cursor: pointer;
+  margin-left: -2%;
+}
+
+.hamburger-icon {
+  width: 2.5%;
+  cursor: pointer;
+}
+
+.X {
+  width: 2%;
+}
+
+.warner-logo {
+  width: 5%;
+  margin-left: 3.5rem;
+}
+
+.bar {
+  width: 100%;
+  padding: 0.2rem;
+  background-color: #d4ac68;
+}
+/* HEADER */
