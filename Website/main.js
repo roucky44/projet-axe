@@ -14,11 +14,16 @@ closeNav.addEventListener('click', () => {
 });
 
 // ferme la nav si on clique dehors grace au target
-document.addEventListener('click', (event) => {
-  if (!sideNav.contains(event.target) && !hamburgerIcon.contains(event.target)) {
-    sideNav.classList.remove('open');
-  }
-});
+if (sideNav && hamburgerIcon) {
+  document.addEventListener('click', (event) => {
+    if (!sideNav.contains(event.target) && !hamburgerIcon.contains(event.target)) {
+      sideNav.classList.remove('open');
+    }
+  });
+}
+
+
+
 
 // ---------- DARK MODE --------- //
 
@@ -30,42 +35,6 @@ btn.addEventListener('click', function(){
     body.classList.toggle("dark_mode");
 })
 
-// ---------- TABS --------- //
-
-const tabli = document.querySelectorAll('.tab');
-const tabcontent = document.querySelector('.tabcontent')
-
-tabli.forEach(tab => {
-    tab.addEventListener('click', function() {
-        tabli.forEach(tab2 => {
-            tab2.classList.remove('.tab-active')
-        });
-    })
-});
-
-ul.addEventListener('click', (event) => {
-    console.log(event.target.databtaset)
-    if (event.target.classList.contains('tab-active')) { //élément enfant
-        return;
-    };
-    
-    const dataTab = event.target.dataset.tab;
-    document.querySelector('.tab-active').classList.remove('tab-active')
-    document.querySelector('.content-active').classList.remove('content-active')
-    event.target.classList.add('tab-active');
-    document.querySelector(`.content[data-content="${dataTab}"]`).classList.add('content-active')
-});
-
-// Explication ${} :
-// Nom : template string
-// Cas d'usage : passer une variable dans une string
-
-// Event délégation
-
-
-// Au clique sur un tab
-// Si le tab cliqué est actif, on lui retire la classe
-// Sinon, on retire la classe active du tab actif ou on attribue la classe activeau tab cliqué
 
 // -------- FORMULAIRE ---------- //
 

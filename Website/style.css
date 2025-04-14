@@ -35,6 +35,23 @@
 /* ===== VARIABLES ===== */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== HEADER ===== */
 #main-header-div {
   background-color: #12141c;
@@ -84,7 +101,116 @@
   cursor: pointer;
 }
 
+/* ===== NAVIGATION LATÉRALE ===== */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #12141c;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.side-nav.open {
+  transform: translateX(0);
+}
+
+/* En-tête de la nav */
+.side-nav-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(212, 172, 104, 0.2);
+}
+
+/* Bouton de fermeture */
+.side-nav-header .X {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.side-nav-header .X:hover {
+  transform: rotate(90deg);
+}
+
+/* Liste des liens */
+.side-nav-links {
+  list-style: none;
+  padding: 1.5rem 0;
+  margin: 0;
+}
+
+.side-nav-links li {
+  position: relative;
+  margin: 0.5rem 0;
+}
+
+.side-nav-links li a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Effet hover/active */
+.side-nav-links li a:hover,
+.side-nav-links li a:focus {
+  color: #d4ac68;
+  background-color: rgba(212, 172, 104, 0.1);
+}
+
+/* Indicateur visuel */
+.side-nav-links li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #d4ac68;
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+}
+
+.side-nav-links li a:hover::before,
+.side-nav-links li a:focus::before {
+  transform: scaleY(1);
+}
+
+/* Animation légère au chargement */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.side-nav-links li {
+  animation: fadeIn 0.3s ease
+}
+
 /* ===== HEADER ===== */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== BODY ===== */
 .main-body {
@@ -92,6 +218,26 @@
   height: 100vh;
 }
 /* ===== BODY ===== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== MAIN ===== */
 
@@ -386,6 +532,18 @@
 
 /* ===== MAIN ===== */
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== FOOTER ===== */
 
 .footer {
@@ -503,6 +661,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 /* FORM */
 
+
+
+
+
+
 /* COLORS */
 
 #h4-checkboxes {
@@ -521,6 +684,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   transition: 0.5s;
 }
 /* COLORS */
+
+
+
 
 /* Bouton de soumission */
 .submit-btn {
@@ -575,6 +741,16 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   margin-left: 30rem;
 }
 /* Bouton de soumission */
+
+
+
+
+
+
+
+
+
+
 
 
 /* ===== DARK MODE ===== */
@@ -640,9 +816,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   border: 0.1rem solid #ff0000;
 }
 
-/* BUTTON DARK MODE */
-
-
 .darkmode_btn:hover {
   box-shadow: 0 .375rem 1.25rem rgba(255, 255, 255, 0.365)0.23;
 }
+
+/* BUTTON DARK MODE */
