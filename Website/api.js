@@ -119,8 +119,7 @@ document.getElementById('character-form').addEventListener('submit', async (e) =
 });
 
 async function postCharacter(characterData) {
-    // Remplacez cette URL par votre véritable endpoint POST
-    const ApiUrl = 'https://the-one-api.dev/v2/character'; // API factice pour l'exemple
+    const ApiUrl = 'https://the-one-api.dev/v2/character';
     
     const response = await fetch(ApiUrl, {
         method: 'POST',

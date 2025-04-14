@@ -1,4 +1,4 @@
-/*  GLOBAL */
+/* ===== GLOBAL ===== */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +9,9 @@
   list-style-type: none;
   scroll-behavior: smooth;
 }
-/*  GLOBAL */
+/* ===== GLOBAL ===== */
 
-/* BASE */
+/* ===== BASE ===== */
 .d-flex {
   display: flex;
 }
@@ -19,9 +19,9 @@
 .justify-content-center {
   justify-content: center;
 }
-/* BASE */
+/* ===== BASE ===== */
 
-/* VARIABLES */
+/* ===== VARIABLES ===== */
 .separator {
   display: flex;
   justify-content: center;
@@ -32,126 +32,68 @@
   width: 80%;
   height: 7rem;
 }
-/* VARIABLES */
+/* ===== VARIABLES ===== */
 
-/* HEADER */
+
+/* ===== HEADER ===== */
 #main-header-div {
   background-color: #12141c;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .625rem;
+  padding: 0.625rem;
   width: 100%;
 }
 
 .header-div {
   display: flex;
   align-items: center;
-  gap: .625rem;
+  gap: 0.625rem;
+  width: 100%; /* Ensure full width */
 }
 
+/* Fixed icon-div (now responsive) */
 .icon-div {
   display: flex;
   align-items: center;
-  justify-content: end;
-  width: 100%;
+  margin-left: auto; /* Pushes icons to the far right */
   gap: 2rem;
-  margin-left: 70rem;
 }
 
 .icon-div img {
   cursor: pointer;
   width: 2rem;
+  height: auto; /* Maintain aspect ratio */
 }
 
+/* Make logos responsive (replace fixed % with clamp/vw) */
 .main-logo {
-  width: 15%;
+  width: clamp(100px, 15%, 200px); /* Responsive range */
   cursor: pointer;
   margin-left: 1%;
 }
 
-.hamburger-icon {
-  width: 2rem;
-  cursor: pointer;
-}
-
-.X {
-  width: 2%;
-  margin-left: 2rem;
-}
-
 .warner-logo {
-  width: 4%;
+  width: clamp(30px, 4%, 60px); /* Responsive range */
   margin-left: 2rem;
 }
 
-.bar {
-  width: 100%;
-  padding: 0.2rem;
-  background-color: #d4ac68;
-}
-
-
-.side-nav {
-  height: 100%;
-  width: 0; 
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background-color: #12141c;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.side-nav-header {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
-}
-
-.side-nav-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.side-nav-links li {
-  padding: 1rem;
-  text-align: center;
-}
-
-.side-nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
-
-.side-nav-links li a:hover {
-  color: #d4ac68;
-}
-
-
-.X {
-  cursor: pointer;
+/* Hamburger/X buttons */
+.hamburger-icon, .X {
   width: 2rem;
+  cursor: pointer;
 }
 
-.side-nav.open {
-  width: 250px; 
-}
-/* HEADER */
+/* ===== HEADER ===== */
 
-/* BODY */
+/* ===== BODY ===== */
 .main-body {
   background-color: #151721;
   height: 100vh;
 }
-/* BODY */
+/* ===== BODY ===== */
 
-/* MAIN */
+/* ===== MAIN ===== */
 
 /* MAIN-SECTION */
 .main-section {
@@ -442,9 +384,9 @@
   margin-right: .5rem;
 }
 
-/* MAIN */
+/* ===== MAIN ===== */
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 .footer {
   padding: 0.1rem;
@@ -476,7 +418,7 @@
   color: white !important;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 
 
@@ -484,7 +426,7 @@
 
 
 
-/* LOGIN */
+/* ===== LOGIN ===== */
 
 /* FORM */
 
@@ -559,8 +501,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .div-check-password input {
   width: auto;
 }
+/* FORM */
 
-/* colors */
+/* COLORS */
 
 #h4-checkboxes {
   align-self: center;
@@ -577,8 +520,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   border: 0.1rem solid #ff0000;
   transition: 0.5s;
 }
+/* COLORS */
 
-/* --------- Bouton de soumission --------- */
+/* Bouton de soumission */
 .submit-btn {
   background-color: #D8B273;
   color: white;
@@ -630,11 +574,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   align-content: center;
   margin-left: 30rem;
 }
+/* Bouton de soumission */
 
 
-/* DARKMODE */
-
-/*------ DARK MODE ------ */
+/* ===== DARK MODE ===== */
 
 .dark_mode {
   background-color: #101010;

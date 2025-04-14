@@ -40,3 +40,15 @@
     /* Styles pour très grands écrans et télévisions */
 }
 
+/* Ajustement Mobile */
+@media (max-width: 768px) {
+    .icon-div {
+      gap: 1rem; 
+    }
+    .icon-div img {
+      width: 1.5rem;
+    }
+    .warner-logo {
+      margin-left: 1rem;
+    }
+}
