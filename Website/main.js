@@ -28,11 +28,11 @@ if (sideNav && hamburgerIcon) {
 // ---------- DARK MODE --------- //
 
 const body = document.querySelector('body');
-const btn = document.querySelector('.darkmode_btn');
+const btn = document.querySelector('.lightmode_btn');
 const ul = document.querySelector('.ultab')
 
 btn.addEventListener('click', function(){
-    body.classList.toggle("dark_mode");
+    body.classList.toggle("light_mode");
 })
 
 

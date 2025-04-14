@@ -38,7 +38,7 @@
                 <img class="warner-logo" src="assets/icons/wb-logo.png" alt="logo de la warner bros">
                 <div class="icon-div">
                     <img src="assets/icons/icons8-chercher-50.png" alt="icon search">
-                    <img class="darkmode_btn" src="assets/icons/dark-mode-icon.png" alt="icon dark mode">
+                    <img class="lightmode_btn" src="assets/icons/dark-mode-icon.png" alt="icon light mode">
                     <a href="form.php"><img src="assets/icons/login-icon.png" alt="icon Login"></a>
                 </div>
             </div>
