@@ -70,6 +70,10 @@
     color: #d4a259;
   }
   
+.light_mode a:hover {
+    color: #b38b59;
+  }
+
   /* Boutons */
   .light_mode .main-button {
     background: #b38b59;
