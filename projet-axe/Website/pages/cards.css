@@ -1,0 +1,162 @@
+body-collection {
+  background-image: url('../assets/wallpaper/434750.jpg');
+}
+
+/* LOADING ET MESSAGE ERREUR */
+.loader, .error {
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 .125rem .3125rem rgba(0,0,0,0.1);
+}
+
+.spinner {
+  border: .25rem solid rgba(0, 0, 0, 0.1);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s ease infinite;
+  margin: .625rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.error small {
+  display: block;
+  margin-top: .3125rem;
+  color: #58151c;
+}
+/* LOADING ET MESSAGE ERREUR */
+
+
+
+
+
+
+
+
+
+
+/* Style the character count */
+.count {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  font-size: 1.1em;
+}
+
+/* Grid Layout for the cards */
+.character-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Space between cards */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling */
+.character-card {
+  background-color: #ffffff;
+  border: .0625rem solid #ddd;
+  border-radius: .5rem;
+  padding: .9375rem 1.25rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Push wiki link towards bottom */
+  min-height: 12.5rem; /* Ensure cards have some minimum height */
+}
+
+.character-card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 .375rem .75rem rgba(0, 0, 0, 0.1);
+}
+/* Styling */
+
+
+
+
+
+
+
+
+/* Content */
+.character-card .char-name {
+  margin-top: 0;
+  margin-bottom: .9375rem;
+  color: #333;
+  font-size: 1.4em;
+  border-bottom: .0625rem solid #eee;
+  padding-bottom: .625rem;
+}
+
+.character-card .char-detail {
+  margin: .3125rem 0;
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.4;
+}
+
+.character-card .char-detail .label {
+  font-weight: bold;
+  color: #666;
+  margin-right: .3125rem;
+}
+
+.character-card .char-detail .value {
+  color: #333;
+}
+/* Content */
+
+
+
+
+
+/* Wiki */
+.character-card .char-wiki {
+  margin-top: .9375rem; /* Add space above the link */
+  padding-top: .625rem;
+  border-top: .0625rem solid #eee;
+  text-align: center;
+}
+
+.character-card .char-wiki a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.character-card .char-wiki a:hover {
+  color: #0056b3;
+}
+
+.character-card .char-wiki span { /* Style for "Pas de Wiki" */
+  font-style: italic;
+  color: #888;
+  font-size: 0.9em;
+}
+/* Wiki */
+

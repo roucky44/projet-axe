@@ -4,13 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collection | Lotr 2025</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="collection.css">
-  <link rel="stylesheet" href="responsive.css">
-  <link rel="stylesheet" href="table.css">
   <link rel="stylesheet" href="global.css">
 </head>
-<body>
+<body class="body-collection">
   <header class="header1">
 
     <nav class="side-nav" id="sideNav">

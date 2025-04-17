@@ -44,53 +44,39 @@ function renderCharacters(characters, container) {
         return;
     }
 
-    const html = `
-            <p class="count">${characters.length} personnages chargés</p>
-        <table id="lotr-table">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Race</th>
-                    <th>Genre</th>
-                    <th>Naissance</th>
-                    <th>Mort</th>
-                    <th>Monde</th>
-                    <th>Conjoint</thW>
-                    <th>Wiki</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${characters.map(char => `
-                    <tr>
-                        <td>${sanitizeHTML(char.name)}</td>
-                        <td>${sanitizeHTML(char.race)}</td>
-                        <td>${sanitizeHTML(char.gender)}</td>
-                        <td>${sanitizeHTML(char.birth)}</td>
-                        <td>${sanitizeHTML(char.death)}</td>
-                        <td>${sanitizeHTML(char.realm)}</td>
-                        <td>${sanitizeHTML(char.spouse)}</td>
-                        <td>
-                            ${char.wikiUrl 
-                                ? `<a href="${sanitizeHTML(char.wikiUrl)}" target="_blank">📖</a>` 
-                                : '—'}
-                        </td>
-                    </tr>
-                `).join('')}
-            </tbody>
-        </table>
+    const cardsHtml = `
+        <p class="count">${characters.length} personnages chargés</p>
+        <div class="character-flex"> 
+            ${characters.map(char => `
+                <div class="character-card"> 
+                    <h3 class="char-name">${sanitizeHTML(char.name)}</h3>
+                    <p class="char-detail"><span class="label">Race:</span> <span class="value">${sanitizeHTML(char.race)}</span></p>
+                    <p class="char-detail"><span class="label">Genre:</span> <span class="value">${sanitizeHTML(char.gender)}</span></p>
+                    <p class="char-detail"><span class="label">Naissance:</span> <span class="value">${sanitizeHTML(char.birth)}</span></p>
+                    <p class="char-detail"><span class="label">Mort:</span> <span class="value">${sanitizeHTML(char.death)}</span></p>
+                    <p class="char-detail"><span class="label">Monde:</span> <span class="value">${sanitizeHTML(char.realm)}</span></p>
+                    <p class="char-detail"><span class="label">Conjoint:</span> <span class="value">${sanitizeHTML(char.spouse)}</span></p>
+                    <div class="char-wiki">
+                        ${char.wikiUrl 
+                            ? `<a href="${sanitizeHTML(char.wikiUrl)}" target="_blank" rel="noopener noreferrer">Voir Wiki 📖</a>` 
+                            : '<span>Pas de Wiki</span>'}
+                    </div>
+                </div> 
+            `).join('')}
+        </div> 
     `;
 
-    container.innerHTML = html;
+    container.innerHTML = cardsHtml; // Inject the new HTML structure
 }
 
+// important car 
 function sanitizeHTML(text) {
-    if (!text) return 'N/A';
+     if (!text) return 'N/A'; // Return 'N/A' pour données null ou undefined
     return text.toString()
         .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
+        .replace(/</g, '&lt;') // pour éviter les injections de code HTML
         .replace(/>/g, '&gt;');
 }
-
 
 
 
@@ -101,12 +87,10 @@ function sanitizeHTML(text) {
 document.getElementById('character-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const formData = {
+    const formData = { // form pour choisir un personnage
         name: document.getElementById('name').value,
         race: document.getElementById('race').value,
         gender: document.getElementById('gender').value,
-        birth: "Inconnue",
-        death: "Inconnue"
     };
     
     try {
