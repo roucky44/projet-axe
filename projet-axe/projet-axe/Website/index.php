@@ -9,8 +9,6 @@
         href="assets/img/png-transparent-lord-of-the-rings-logo-lego-the-lord-of-the-rings-the-hobbit-the-fellowship-of-the-ring-legolas-lord-of-the-rings-text-logo-desktop-wallp.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="global.css">
 </head>
 

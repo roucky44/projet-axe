@@ -5,12 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign In | Lotr 2025</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="global.css">
 </head>
 
-<body>
+<body class="body-form">
   <header class="header1">
 
     <nav class="side-nav" id="sideNav">
