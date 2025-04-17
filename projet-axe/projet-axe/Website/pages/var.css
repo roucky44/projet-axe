@@ -1,0 +1,16 @@
+:root {
+--color-default: #151721; /* Couleur principale */
+--color-match: #d4ac68 /* Couleur match */
+--color-light-mode: #F5F5F5; /* Light mode */
+--color-text-default: #333333; /* Couleur texte default */
+--color-text-light: #FFFFFF; /* Couleur texte */
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+}
+

@@ -1,6 +1,8 @@
 body.body-collection{
   background-image: url('../assets/wallpaper/434750.jpg');
-  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 
 /* STATIC CARDS */
