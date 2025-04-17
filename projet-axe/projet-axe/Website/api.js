@@ -58,7 +58,7 @@ function renderCharacters(characters, container) {
                     <p class="char-detail"><span class="label">Conjoint:</span> <span class="value">${sanitizeHTML(char.spouse)}</span></p>
                     <div class="char-wiki">
                         ${char.wikiUrl 
-                            ? `<a href="${sanitizeHTML(char.wikiUrl)}" target="_blank" rel="noopener noreferrer">Voir Wiki 📖</a>` 
+                            ? `<a href="${sanitizeHTML(char.wikiUrl)}" target="_blank" rel="noopener noreferrer">Voir Wiki</a>` 
                             : '<span>Pas de Wiki</span>'}
                     </div>
                 </div> 
