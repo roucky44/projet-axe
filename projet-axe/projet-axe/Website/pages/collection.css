@@ -1,3 +1,8 @@
+body.body-collection{
+  background-image: url('../assets/wallpaper/434750.jpg');
+  background-origin: border-box;
+}
+
 /* STATIC CARDS */
 .card-section {
   display: flex;

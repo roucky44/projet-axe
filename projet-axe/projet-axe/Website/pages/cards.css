@@ -1,7 +1,3 @@
-body-collection {
-  background-image: url('../assets/wallpaper/434750.jpg');
-}
-
 /* LOADING ET MESSAGE ERREUR */
 .loader, .error {
   text-align: center;
