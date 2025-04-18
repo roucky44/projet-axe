@@ -1,10 +1,11 @@
 /* LOADING ET MESSAGE ERREUR */
-.loader, .error {
+.loader,
+.error {
   text-align: center;
   padding: 2.5rem;
   background-color: #fff;
   border-radius: .5rem;
-  box-shadow: 0 .125rem .3125rem rgba(0,0,0,0.1);
+  box-shadow: 0 .125rem .3125rem rgba(0, 0, 0, 0.1);
 }
 
 .spinner {
@@ -18,8 +19,13 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .error {
@@ -33,6 +39,7 @@
   margin-top: .3125rem;
   color: #58151c;
 }
+
 /* LOADING ET MESSAGE ERREUR */
 
 
@@ -63,22 +70,25 @@
 
 /* Styling */
 .character-card {
-  background-color: #ffffff;
-  border: .0625rem solid #ddd;
-  border-radius: .5rem;
   padding: .9375rem 1.25rem;
-  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 12.5rem; /* pour la longueur de texte variable */
+  background: rgba(24, 24, 24, 0.36);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(24, 24, 24, 0.78);
 }
 
 .character-card:hover {
   transform: translateY(-0.3125rem);
   box-shadow: 0 .375rem .75rem rgba(0, 0, 0, 0.1);
 }
+
 /* Styling */
 
 
@@ -92,7 +102,7 @@
 .character-card .char-name {
   margin-top: 0;
   margin-bottom: .9375rem;
-  color: #333;
+  color: #ffffff;
   font-size: 1.4em;
   border-bottom: .0625rem solid #eee;
   padding-bottom: .625rem;
@@ -101,19 +111,20 @@
 .character-card .char-detail {
   margin: .3125rem 0;
   font-size: 0.95em;
-  color: #444;
+  color: #ffffff;
   line-height: 1.4;
 }
 
 .character-card .char-detail .label {
   font-weight: bold;
-  color: #666;
+  color: #ffffff;
   margin-right: .3125rem;
 }
 
 .character-card .char-detail .value {
-  color: #333;
+  color: #ffffff;
 }
+
 /* Content */
 
 
@@ -130,19 +141,20 @@
 
 .character-card .char-wiki a {
   text-decoration: none;
-  color: #007bff;
+  color: #d4ac68;
   font-weight: bold;
   transition: color 0.2s ease;
 }
 
 .character-card .char-wiki a:hover {
-  color: #0056b3;
+  color: #d4ac68;
 }
 
-.character-card .char-wiki span { /* Style for "Pas de Wiki" */
+.character-card .char-wiki span {
+  /* Style for "Pas de Wiki" */
   font-style: italic;
   color: #888;
   font-size: 0.9em;
 }
-/* Wiki */
 
+/* Wiki */

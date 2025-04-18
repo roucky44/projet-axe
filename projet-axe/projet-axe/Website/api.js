@@ -50,6 +50,7 @@ function renderCharacters(characters, container) {
             ${characters.map(char => `
                 <div class="character-card"> 
                     <h3 class="char-name">${sanitizeHTML(char.name)}</h3>
+                    <img class="char-image" src="${sanitizeHTML(char.image)}" alt="${sanitizeHTML(char.name)}">
                     <p class="char-detail"><span class="label">Race:</span> <span class="value">${sanitizeHTML(char.race)}</span></p>
                     <p class="char-detail"><span class="label">Genre:</span> <span class="value">${sanitizeHTML(char.gender)}</span></p>
                     <p class="char-detail"><span class="label">Naissance:</span> <span class="value">${sanitizeHTML(char.birth)}</span></p>
@@ -66,7 +67,7 @@ function renderCharacters(characters, container) {
         </div> 
     `;
 
-    container.innerHTML = cardsHtml; // Inject the new HTML structure
+    container.innerHTML = cardsHtml; // injecte le container dans le dom
 }
 
 // important car 
@@ -111,7 +112,7 @@ async function postCharacter(characterData) {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer KtFGls3XWxo_air2CXKc'
         },
-        body: JSON.stringify(characterData)
+        body: JSON.stringify(characterData) 
     });
     
     if (!response.ok) {

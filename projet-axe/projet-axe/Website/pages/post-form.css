@@ -1,0 +1,72 @@
+/* Style général du formulaire */
+#character-form {
+  max-width: 31.25rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgba(255, 255, 255, 0.2);   /* GLASS EFFECT */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Style des labels */
+#character-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Style des champs de saisie */
+#character-form input,
+#character-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 0.0625rem solid #d4ac68;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background-color: #f9f9f9;
+}
+
+#character-form input:focus,
+#character-form select:focus {
+  border-color: #333333;
+  outline: none;
+  box-shadow: 0 0 0 0.125rem rgba(212, 172, 104, 0.3);
+}
+
+/* Style du bouton */
+#character-form button {
+  background: #333333;
+  color: #d4ac68;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+#character-form button:hover {
+  background: #d4ac68;
+  color: #333333;
+}
+
+/* Style des messages */
+#form-message {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: 0.0625rem solid #333333;
+}
