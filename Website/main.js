@@ -35,106 +35,22 @@ btn.addEventListener('click', function(){
     body.classList.toggle("light_mode");
 })
 
+// ---------- BOOSTER --------- //
 
-// -------- FORMULAIRE ---------- //
-
-let form = document.querySelector('#register-form');
-let errorContainer = document.querySelector('.message-error')
-
-form.addEventListener('submit', function(event) {            //Function reset default button action
-    event.preventDefault();
-    console.log('Envoi du form detecté.')
-})
-
-
-
-// --- EMAIL CHECK --- //
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    let email = document.querySelector('#email')
-
-    if(email.value == '') {
-        console.log("Email invalide")
-        errorContainer.classList.add('.message-error.visible')
-        email.classList.remove('.success')
-
-        let err = document.createElement('li')
-        err.innerText = "\nL'Email n'est pas renseigné ou n'est pas correcte."
-
-        errorContainer.appendChild(err)
-    } else {
-        email.classList.add('success')
-    }
-
-// --- PSEUDO CHECK --- //
-
-    let pseudo = document.querySelector('#pseudo')
-
-    if(pseudo.value.length > 6) {
-        pseudo.classList.add('success')
-    } else {
-        errorContainer.classList.add('.message-error.visible')
-        pseudo.classList.remove('.success')
-
-        let err = document.createElement('li')
-        err.innerText = "\nLe champ pseudo doit contenir au moins 6 caractères"
-
-        errorContainer.appendChild(err)
-    }
-
-// --- PASSWORD CHECK --- //
-    
-    let password = document.querySelector('#password')
-    let passCheck = new RegExp ("^(?=.*[a-z])(?=.*[A-Z])(?=.*)(?=.*[@$!%*?&])[A-Za-z@$!%*?&]{8,}$")
-    
-    if(password.value.length < 8 || password.value.length === 8 || passCheck.test(password.value) == false) {
-        password.classList.add('error'), console.log("Votre mot de passe doit comporter > Au moins une lettre minuscule > Au moins une lettre majuscule > Au moins un chiffre > Au moins un caractère spécial")
-        
-        console.log('invalide')
-        errorContainer.classList.add('.message-error-visible')
-        password.classList.remove('.success')
-
-        password.classList.add('visible-text-shadow')
-        let err = document.createElement('li')
-        if(password != ''){
-            err.innerText = "\nVotre mot de passe doit comporter > Au moins une lettre minuscule > Au moins une lettre majuscule > Au moins un chiffre > Au moins un caractère spécial"
-        }
-        
-        errorContainer.appendChild(err)
-
-    } else {
-        password.classList.add('.success')
-    }
-
-// --- PASSWORD CONFIRMATION CHECK --- //
-
-    let passwordConfirmation = document.querySelector('#passwordconfirmation')
-
-    if(passwordConfirmation === password.value) {
-        passwordConfirmation.classList.add('success')
-    } else {
-        console.log('invalide')
-        errorContainer.classList.add('.message-error.visible')
-        passwordConfirmation.classList.remove('success')
-
-        let err = document.createElement('li')
-        if(passwordConfirmation != ''){
-            err.innerText = "\nLes mots de passe ne sont pas identiques!"
-        }
-        
-        errorContainer.appendChild(err)
-    }
-
-    let successContainer = document.querySelector('.message-success')
-    successContainer.classList.remove('visible')
-
-    if(
-        pseudo.classList.contains('success') &&
-        email.classList.contains('success') &&
-        password.classList.contains('success') &&
-        passwordConfirmation.contains('success')
-    ) {
-        successContainer.classList.add('visible')
-    }
-    })
+document.getElementById('open-booster-btn').addEventListener('click', function() {
+    fetch('booster.php')
+        .then(res => res.json())
+        .then(data => {
+            const resultDiv = document.getElementById('booster-result');
+            if (data.success) {
+                resultDiv.innerHTML = data.cards.map(card =>
+                    `<div>
+                        <strong>${card.name}</strong><br>
+                        <img src="${card.image || ''}" alt="${card.name}" style="max-width:100px;">
+                    </div>`
+                ).join('');
+            } else {
+                resultDiv.textContent = data.message;
+            }
+        });
+});

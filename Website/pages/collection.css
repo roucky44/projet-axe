@@ -1,4 +1,11 @@
-/* CARDS */
+body.body-collection{
+  background-image: url('../assets/wallpaper/434750.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+/* STATIC CARDS */
 .card-section {
   display: flex;
   gap: 2rem;
@@ -55,12 +62,12 @@
   font-size: .8rem;
   color: #ccc;
 }
-/* CARDS */
+/* STATIC CARDS */
 
 
 /* TITLES */
 #api-title {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: underline;
   cursor: pointer;
   font-size: xx-large;
@@ -71,11 +78,11 @@
 }
 
 #api-title:hover {
-  color: #1a1c24;
+  color: #acacac;
 }
 
 #POST-title {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: underline;
   cursor: pointer;
   font-size: xx-large;
@@ -86,7 +93,7 @@
 }
 
 #POST-title:hover {
-  color: #1a1c24;
+  color: #dddddd;
 }
 
 .count {
@@ -96,51 +103,3 @@
   text-decoration: underline;
 }
 /* TITLES */
-
-
-
-/* POST FORM */
-.add-character {
-  margin-top: 40px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.submit-btn {
-  background: #d4ac68;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.submit-btn:hover {
-  background: #ac8b53;
-}
-
-#form-message {
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 4px;
-}
-/* POST FORM */

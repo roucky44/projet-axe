@@ -1,0 +1,79 @@
+.a-class {
+  position: fixed;
+  z-index: 1000;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: #d4ac68;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.1s;
+  outline: none;
+}
+
+.a-class:active {
+  transform: scale(0.96);
+}
+
+.a-class:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.a-class span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Balise Dialog */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 2.5em 2em 2em 2em;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  min-width: 320px;
+  max-width: 90vw;
+  background: #fff;
+  animation: modalFadeIn 0.25s;
+  margin: auto;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+/* Bouton de fermeture */
+#closeModalBtn {
+  margin-top: 1.5em;
+  padding: 0.6em 1.5em;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #d4ac68;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#closeModalBtn:hover {
+  background: #9e8457;
+}
